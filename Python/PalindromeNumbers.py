@@ -45,8 +45,36 @@ def is_palndr(n):
 	n = str(n)
 	return n[::-1] == n
 
+def bin_pal(ceiling, red=False):
+	for x in range(ceiling):
+		n = str(bin(x))[2:]
+		if is_palndr(n): 
+			yield n
+
 def main():
-	print([x for x in palndr_nums(199)])
+	# print([x for x in palndr_nums(1990)])
+	l = [x for x in bin_pal(1000)]
+	j = [ ]
+	for x in l:
+		cur = [ ]
+		good = True
+		for c in x:
+			if c not in cur: cur = [c]
+			elif c in cur: cur.append(c)
+			if len(cur) > 2:
+				good = False
+				break
+		if good:
+			j.append(x)
+		# else:
+		# 	print(f'bad: {x}')
+
+
+	for x in l:
+		print(f'{int(x,2)**2}, ', end='')
+	# print()
+	# for x in l:
+	# 	print(int(x), int(x,2))
 
 if __name__ == '__main__':
 	main()
