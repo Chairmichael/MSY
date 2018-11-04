@@ -36,3 +36,10 @@ def cat(n, m):
 	# x = 10**l
 	# return n * x + m
 
+def main():
+	print(f'is_prime(455) = {is_prime(455)}')
+	print(f'is_prime(377) = {is_prime(377)}')
+	print(f'is_prime(203) = {is_prime(203)}')
+
+if __name__ == '__main__':
+	main()
