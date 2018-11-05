@@ -46,8 +46,3 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Credentials
-credentials.ini
-
-# Cache folders
-__pycache__
