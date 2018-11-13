@@ -1,8 +1,0 @@
-# Credentials
-credentials.ini
-
-# Cache folders
-__pycache__
-
-# Output file
-*.csv
